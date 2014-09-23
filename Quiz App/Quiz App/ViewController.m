@@ -33,6 +33,8 @@
     
     [questions addObject:@"What does Sheldon Copper study?"];
     [answers addObject:@"String Theory"];
+    [questions addObject:@"What were George Washington's fake teeth made of?"];
+    [answers addObject:@"Wood"];
     
 }
 

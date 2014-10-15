@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		112E6D6819E32F180061ABAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D6719E32F180061ABAE /* main.m */; };
+		112E6D6B19E32F180061ABAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D6A19E32F180061ABAE /* AppDelegate.m */; };
+		112E6D6E19E32F180061ABAE /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D6D19E32F180061ABAE /* MasterViewController.m */; };
+		112E6D7119E32F180061ABAE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D7019E32F180061ABAE /* DetailViewController.m */; };
+		112E6D7419E32F180061ABAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 112E6D7219E32F180061ABAE /* Main.storyboard */; };
+		112E6D7619E32F180061ABAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112E6D7519E32F180061ABAE /* Images.xcassets */; };
+		112E6D7919E32F180061ABAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112E6D7719E32F180061ABAE /* LaunchScreen.xib */; };
+		112E6D8519E32F190061ABAE /* Panini_RecipesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D8419E32F190061ABAE /* Panini_RecipesTests.m */; };
+		112E6D9019E32FFB0061ABAE /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 112E6D8F19E32FFB0061ABAE /* Recipe.m */; };
+		112E6D9A19E3B3360061ABAE /* images in Resources */ = {isa = PBXBuildFile; fileRef = 112E6D9919E3B3360061ABAE /* images */; };
+		11FD3A6E19E49899002BADFA /* AddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FD3A6D19E49899002BADFA /* AddRecipeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		112E6D7F19E32F190061ABAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 112E6D5A19E32F180061ABAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 112E6D6119E32F180061ABAE;
+			remoteInfo = "Panini Recipes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		112E6D6219E32F180061ABAE /* Panini Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panini Recipes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		112E6D6619E32F180061ABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		112E6D6719E32F180061ABAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		112E6D6919E32F180061ABAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		112E6D6A19E32F180061ABAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		112E6D6C19E32F180061ABAE /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		112E6D6D19E32F180061ABAE /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		112E6D6F19E32F180061ABAE /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		112E6D7019E32F180061ABAE /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; usesTabs = 0; };
+		112E6D7319E32F180061ABAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		112E6D7519E32F180061ABAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		112E6D7819E32F180061ABAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		112E6D7E19E32F190061ABAE /* Panini RecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Panini RecipesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		112E6D8319E32F190061ABAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		112E6D8419E32F190061ABAE /* Panini_RecipesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Panini_RecipesTests.m; sourceTree = "<group>"; };
+		112E6D8E19E32FFB0061ABAE /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		112E6D8F19E32FFB0061ABAE /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		112E6D9919E3B3360061ABAE /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../images; sourceTree = "<group>"; };
+		11FD3A6C19E49899002BADFA /* AddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddRecipeViewController.h; path = ../AddRecipeViewController.h; sourceTree = "<group>"; };
+		11FD3A6D19E49899002BADFA /* AddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddRecipeViewController.m; path = ../AddRecipeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		112E6D5F19E32F180061ABAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112E6D7B19E32F190061ABAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		112E6D5919E32F180061ABAE = {
+			isa = PBXGroup;
+			children = (
+				112E6D6419E32F180061ABAE /* Panini Recipes */,
+				112E6D8119E32F190061ABAE /* Panini RecipesTests */,
+				112E6D6319E32F180061ABAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		112E6D6319E32F180061ABAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				112E6D6219E32F180061ABAE /* Panini Recipes.app */,
+				112E6D7E19E32F190061ABAE /* Panini RecipesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		112E6D6419E32F180061ABAE /* Panini Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				112E6D9919E3B3360061ABAE /* images */,
+				112E6D6919E32F180061ABAE /* AppDelegate.h */,
+				112E6D6A19E32F180061ABAE /* AppDelegate.m */,
+				112E6D6C19E32F180061ABAE /* MasterViewController.h */,
+				112E6D6D19E32F180061ABAE /* MasterViewController.m */,
+				112E6D6F19E32F180061ABAE /* DetailViewController.h */,
+				112E6D7019E32F180061ABAE /* DetailViewController.m */,
+				11FD3A6C19E49899002BADFA /* AddRecipeViewController.h */,
+				11FD3A6D19E49899002BADFA /* AddRecipeViewController.m */,
+				112E6D7219E32F180061ABAE /* Main.storyboard */,
+				112E6D7519E32F180061ABAE /* Images.xcassets */,
+				112E6D7719E32F180061ABAE /* LaunchScreen.xib */,
+				112E6D6519E32F180061ABAE /* Supporting Files */,
+				112E6D8E19E32FFB0061ABAE /* Recipe.h */,
+				112E6D8F19E32FFB0061ABAE /* Recipe.m */,
+			);
+			path = "Panini Recipes";
+			sourceTree = "<group>";
+		};
+		112E6D6519E32F180061ABAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				112E6D6619E32F180061ABAE /* Info.plist */,
+				112E6D6719E32F180061ABAE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		112E6D8119E32F190061ABAE /* Panini RecipesTests */ = {
+			isa = PBXGroup;
+			children = (
+				112E6D8419E32F190061ABAE /* Panini_RecipesTests.m */,
+				112E6D8219E32F190061ABAE /* Supporting Files */,
+			);
+			path = "Panini RecipesTests";
+			sourceTree = "<group>";
+		};
+		112E6D8219E32F190061ABAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				112E6D8319E32F190061ABAE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		112E6D6119E32F180061ABAE /* Panini Recipes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 112E6D8819E32F190061ABAE /* Build configuration list for PBXNativeTarget "Panini Recipes" */;
+			buildPhases = (
+				112E6D5E19E32F180061ABAE /* Sources */,
+				112E6D5F19E32F180061ABAE /* Frameworks */,
+				112E6D6019E32F180061ABAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Panini Recipes";
+			productName = "Panini Recipes";
+			productReference = 112E6D6219E32F180061ABAE /* Panini Recipes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		112E6D7D19E32F190061ABAE /* Panini RecipesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 112E6D8B19E32F190061ABAE /* Build configuration list for PBXNativeTarget "Panini RecipesTests" */;
+			buildPhases = (
+				112E6D7A19E32F190061ABAE /* Sources */,
+				112E6D7B19E32F190061ABAE /* Frameworks */,
+				112E6D7C19E32F190061ABAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				112E6D8019E32F190061ABAE /* PBXTargetDependency */,
+			);
+			name = "Panini RecipesTests";
+			productName = "Panini RecipesTests";
+			productReference = 112E6D7E19E32F190061ABAE /* Panini RecipesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		112E6D5A19E32F180061ABAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "stephen jamba";
+				TargetAttributes = {
+					112E6D6119E32F180061ABAE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					112E6D7D19E32F190061ABAE = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 112E6D6119E32F180061ABAE;
+					};
+				};
+			};
+			buildConfigurationList = 112E6D5D19E32F180061ABAE /* Build configuration list for PBXProject "Panini Recipes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 112E6D5919E32F180061ABAE;
+			productRefGroup = 112E6D6319E32F180061ABAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				112E6D6119E32F180061ABAE /* Panini Recipes */,
+				112E6D7D19E32F190061ABAE /* Panini RecipesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		112E6D6019E32F180061ABAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112E6D9A19E3B3360061ABAE /* images in Resources */,
+				112E6D7419E32F180061ABAE /* Main.storyboard in Resources */,
+				112E6D7919E32F180061ABAE /* LaunchScreen.xib in Resources */,
+				112E6D7619E32F180061ABAE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112E6D7C19E32F190061ABAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		112E6D5E19E32F180061ABAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112E6D6B19E32F180061ABAE /* AppDelegate.m in Sources */,
+				112E6D9019E32FFB0061ABAE /* Recipe.m in Sources */,
+				11FD3A6E19E49899002BADFA /* AddRecipeViewController.m in Sources */,
+				112E6D6E19E32F180061ABAE /* MasterViewController.m in Sources */,
+				112E6D6819E32F180061ABAE /* main.m in Sources */,
+				112E6D7119E32F180061ABAE /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		112E6D7A19E32F190061ABAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				112E6D8519E32F190061ABAE /* Panini_RecipesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		112E6D8019E32F190061ABAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 112E6D6119E32F180061ABAE /* Panini Recipes */;
+			targetProxy = 112E6D7F19E32F190061ABAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		112E6D7219E32F180061ABAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				112E6D7319E32F180061ABAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		112E6D7719E32F180061ABAE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				112E6D7819E32F180061ABAE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		112E6D8619E32F190061ABAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		112E6D8719E32F190061ABAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		112E6D8919E32F190061ABAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Panini Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		112E6D8A19E32F190061ABAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Panini Recipes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		112E6D8C19E32F190061ABAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Panini RecipesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panini Recipes.app/Panini Recipes";
+			};
+			name = Debug;
+		};
+		112E6D8D19E32F190061ABAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Panini RecipesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panini Recipes.app/Panini Recipes";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		112E6D5D19E32F180061ABAE /* Build configuration list for PBXProject "Panini Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112E6D8619E32F190061ABAE /* Debug */,
+				112E6D8719E32F190061ABAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		112E6D8819E32F190061ABAE /* Build configuration list for PBXNativeTarget "Panini Recipes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112E6D8919E32F190061ABAE /* Debug */,
+				112E6D8A19E32F190061ABAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		112E6D8B19E32F190061ABAE /* Build configuration list for PBXNativeTarget "Panini RecipesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				112E6D8C19E32F190061ABAE /* Debug */,
+				112E6D8D19E32F190061ABAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 112E6D5A19E32F180061ABAE /* Project object */;
+}

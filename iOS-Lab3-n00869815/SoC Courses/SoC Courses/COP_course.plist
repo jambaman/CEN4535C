@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>COP2220 Computer Science I</key>
+	<string>Martin</string>
+	<key>COP2551 Introduction to OOP</key>
+	<string>Littleton</string>
+	<key>COP3530 Data Structures</key>
+	<string>Martin</string>
+	<key>COP5716 Data Modeling and Performance</key>
+	<string>Seyed-Abbassi</string>
+</dict>
+</plist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>65969AA3-6128-44F7-BC91-9AA674650C37</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InstaEmail</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>899E967F-9B52-44E4-83C7-1D2D2E7693BB</key>
+		<string>https://github.com/jambaman/CEN4535C.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InstaEmail/InstaEmail.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>899E967F-9B52-44E4-83C7-1D2D2E7693BB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jambaman/CEN4535C.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>899E967F-9B52-44E4-83C7-1D2D2E7693BB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>899E967F-9B52-44E4-83C7-1D2D2E7693BB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CEN4535C</string>
+		</dict>
+	</array>
+</dict>
+</plist>

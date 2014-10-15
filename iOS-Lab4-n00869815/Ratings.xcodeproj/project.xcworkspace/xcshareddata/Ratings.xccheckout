@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9CE79D29-115E-4896-BB47-5AC854B39CEB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ratings</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>384D329E2A6EBCE43FCD8302777FC920DAE97513</key>
+		<string>https://github.com/jambaman/CEN4535C.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ratings/Ratings.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>384D329E2A6EBCE43FCD8302777FC920DAE97513</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jambaman/CEN4535C.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>384D329E2A6EBCE43FCD8302777FC920DAE97513</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>384D329E2A6EBCE43FCD8302777FC920DAE97513</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CEN4535C</string>
+		</dict>
+	</array>
+</dict>
+</plist>

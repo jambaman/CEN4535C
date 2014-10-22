@@ -7,7 +7,7 @@
 	<string name="true_button">True</string>
 	<string name="false_button">False</string>
 	<string name="next_button">Next</string>
-	
+	<string name="hint_button">Give Me A Hint</string>
 	
 	<string name="answer_text">Correct/Incorrect</string>
 	<string name="correct_text">Correct</string>
@@ -19,4 +19,9 @@
 	Florida.</string>
 	<string name="question_text3">Lynyrd Skynyrd is from 
 	Jacksonville.</string>
+	<string name="show_answer">Show Answer</string>
+	<string name="hint_text">Are you sure you want to do this?</string>
+	<string name="answer_true">The answer is true.</string>
+	<string name="answer_false">The answer is false.</string>
+	<string name="smart_answer">You know the answer.</string>
 </resources>

@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="android.widget.Button"/>
-<fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="unf.edu.soc.jamba.jaxquizapp.R.string"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="unf.edu.soc.jamba.jaxquizapp.R.id"/>
+<fullyQualifiedTypeName name="unf.edu.soc.jamba.jaxquizapp.R.string"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.widget.ListView"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.view.KeyEvent"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.view.ContextMenu"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.AdapterContextMenuInfo"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="android.content.Context"/>
+<fullyQualifiedTypeName name="java.io.Writer"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.json.JSONTokener"/>
+<fullyQualifiedTypeName name="org.json.JSONException"/>
 </qualifiedTypeNameHistroy>

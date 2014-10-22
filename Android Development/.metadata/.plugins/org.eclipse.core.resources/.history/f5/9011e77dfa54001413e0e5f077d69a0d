@@ -1,0 +1,52 @@
+package unf.edu.soc.jamba.jaxquizapp;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+
+
+public class HintActivity extends Activity 
+{
+	public static final String EXTRA_ANSWER_SHOWN = 
+			"edu.unf.soc.jamba.jaxquizapp.extra_answer_shown";
+	public static final String EXTRA_ANSWER = "unf.edu.soc.jamba.jaxquizapp.extra_answer";
+	private boolean mAnswerIsTrue;
+	private Button hint_Button;
+	private TextView hintAnswer;
+	private boolean hint_answer;
+		@Override
+		protected void onCreate(Bundle savedInstanceState) 
+		{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_hint);
+		hintAnswer =(TextView)findViewById(R.id.answer_textView);
+		Intent intent=getIntent();
+		mAnswerIsTrue = intent.getBooleanExtra(EXTRA_ANSWER, false);
+		hint_Button = (Button) findViewById(R.id.hint_button);
+        hint_Button.setOnClickListener(new View.OnClickListener() {
+        	@Override
+            public void onClick(View v) {
+        		
+        		if( mAnswerIsTrue){
+        			hintAnswer.setText(R.string.answer_true);
+        		}else{
+        			hintAnswer.setText(R.string.answer_false);
+        		}
+        		
+        		
+        	}
+        });
+		}
+        private void setAnswerShownResult(boolean isAnswerShown) {
+        	Intent data = new Intent();
+        	data.putExtra(EXTRA_ANSWER_SHOWN, isAnswerShown);
+        	setResult(RESULT_OK, data);
+        }
+	}
+
+	
+

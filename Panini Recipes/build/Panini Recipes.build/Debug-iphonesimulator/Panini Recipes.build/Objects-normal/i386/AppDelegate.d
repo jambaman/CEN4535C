@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/stephenjamba/Desktop/CEN4535C/Panini\ Recipes/Panini\ Recipes/AppDelegate.m \
-  /Users/stephenjamba/Desktop/CEN4535C/Panini\ Recipes/Panini\ Recipes/AppDelegate.h
+  /Users/stephenjamba/Downloads/Panini\ Recipes/Panini\ Recipes/AppDelegate.m \
+  /Users/stephenjamba/Downloads/Panini\ Recipes/Panini\ Recipes/AppDelegate.h

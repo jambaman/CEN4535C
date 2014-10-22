@@ -1,7 +1,9 @@
 package unf.edu.soc.jamba.jaxquizapp;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,46 +23,80 @@ public class MainActivity extends ActionBarActivity {
 	private Button mTrueButton;
 	private Button mFalseButton;
 	private Button mNextButton;
+	private Button mHintButton;
 	private Boolean answer;
     private Boolean correctAnswer;
+    private Boolean mIsHintShown;
+    private static final String KEY_INDEX = "index"; 
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        mQuestionTV = (TextView)findViewById(R.id.question_textView);
+       if(savedInstanceState !=null) {
+    	   mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
+    	   mQuestionTV.setText(mQuestionBank[mCurrentIndex]);
+    	   }
+    	   else
+    	   mQuestionTV.setText(R.string.question_text1);
+       
         mQuestionTV.setText(R.string.question_text1);
         mAnswerTV = (TextView)findViewById(R.id.answer_textView);
-        
+        mIsHintShown = false;
         mTrueButton = (Button) findViewById(R.id.true_button);
         mTrueButton.setOnClickListener(new View.OnClickListener() {
         	
         @Override
         public void onClick(View v) {
-         	answer = true;
+        Log.d("index", " " + mCurrentIndex);
+     	if(mIsHintShown == true)
+     	{
+     		mAnswerTV.setText(R.string.smart_answer);
+     	}else{
+     		answer = true;
         	correctAnswer = mAnswerBank[mCurrentIndex];
-        	if(answer == correctAnswer){
+        	if(correctAnswer)
+        	{
         		mAnswerTV.setText(R.string.correct_text);
         	}else{
-        		mAnswerTV.setText(R.string.incorrect_text);
-        	}
+        		mAnswerTV.setText(R.string.incorrect_text); 	
+        		}
+        
+       		}
+     //	mIsHintShown = null;
         }
         });
         mFalseButton = (Button) findViewById(R.id.false_button);
         mFalseButton.setOnClickListener(new View.OnClickListener() {
-      
-
 		@Override
         public void onClick(View v) {
-        	answer = false;
-        	correctAnswer = mAnswerBank[mCurrentIndex];
-        	if(answer == correctAnswer){
-        		mAnswerTV.setText(R.string.correct_text);
+       	if(mIsHintShown != false){
+        		mAnswerTV.setText(R.string.smart_answer);
         	}else{
-        		mAnswerTV.setText(R.string.incorrect_text);
-        	}
+        		answer = true;
+	        	correctAnswer = mAnswerBank[mCurrentIndex];
+	        	if(!correctAnswer){
+	        		mAnswerTV.setText(R.string.correct_text);
+	        	}else{
+	        		mAnswerTV.setText(R.string.incorrect_text);
+	        	}
         }
+       //	mIsHintShown = null;
+		}
+		});
+        mHintButton = (Button) findViewById(R.id.hint_button);
+        mHintButton.setOnClickListener(new View.OnClickListener() {
+        	@Override
+        	public void onClick(View v) {
+        	 Intent i = new Intent(MainActivity.this, HintActivity.class);
+        	 	boolean answerIsTrue = mAnswerBank[mCurrentIndex];
+        	 	i.putExtra(HintActivity.EXTRA_ANSWER, answerIsTrue);
+        	 	startActivityForResult(i, 0);
+        	}
         });
+       
+        
         mNextButton = (Button) findViewById(R.id.next_button);
         mNextButton.setOnClickListener(new View.OnClickListener() 
         {
@@ -68,6 +104,8 @@ public class MainActivity extends ActionBarActivity {
         public void onClick(View v) 
             {
         	mCurrentIndex++;
+        	mAnswerTV.setText(R.string.answer_text);
+        	mIsHintShown=false;
         	if(mCurrentIndex == mQuestionBank.length)
         	{
         		mCurrentIndex = 0;
@@ -79,13 +117,19 @@ public class MainActivity extends ActionBarActivity {
         		}else if(mCurrentIndex ==2){
         			mQuestionTV.setText(R.string.question_text3);
         		}
-        	mQuestionTV = (TextView)findViewById(R.id.question_textView);
-        	}
+            }
         
         	});
-        
             };
-
+            @Override
+            protected void onActivityResult(int requestCode, int resultCode, Intent data) 
+            {           
+            if(data == null)
+             return;
+            mIsHintShown = data.getBooleanExtra(HintActivity.EXTRA_ANSWER_SHOWN, 
+            false);
+            }
+            
 
     
     @Override
@@ -94,7 +138,11 @@ public class MainActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+    super.onSaveInstanceState(savedInstanceState);
+    savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
+    }
   
     @Override
 	public boolean onOptionsItemSelected(MenuItem item) 

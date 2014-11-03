@@ -1,0 +1,105 @@
+package unf.edu.jambaaddressbook;
+
+
+
+import android.app.Activity;
+import android.app.FragmentTransaction;
+import android.os.Bundle;
+
+
+
+public class MainActivity extends Activity implements 
+ContactInfoFragment.ContactInfoFragmentListener, 
+ListViewFragment.ListViewFragmentListener, 
+ModifyFragment.ModifyFragmentListener
+{
+	public static final String CONTACT_ID = "contact_id"; 
+	
+	ListViewFragment contactFragment;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        if (savedInstanceState != null) 
+            return;
+
+         
+            // create ContactListFragment
+            contactFragment = new ListViewFragment();
+            
+            // add the fragment to the FrameLayout
+            FragmentTransaction transaction = 
+               getFragmentManager().beginTransaction();
+            transaction.add(R.id.fragmentContainer, contactFragment);
+            transaction.commit(); // causes ContactListFragment to display
+         }
+
+    protected void onResume()
+    {
+       super.onResume();
+       
+//          contactFragment = 
+//             (ContactInfoFragment) getFragmentManager().findFragmentById(
+//                R.id.contactInfoScrollView);      
+//       }
+    }
+    public void onContactSelected(long rowID)
+    {
+       displayContact(rowID, R.id.fragmentContainer);   
+    }
+    
+    private void displayContact(long rowID, int viewID)
+    {
+    	ContactInfoFragment contactInfo = new ContactInfoFragment();
+    	
+    	Bundle info = new Bundle();
+    	info.putLong(CONTACT_ID, rowID);
+    	contactInfo.setArguments(info);
+    	FragmentTransaction transaction = 
+    	         getFragmentManager().beginTransaction();
+    	      transaction.replace(viewID, contactInfo);
+    	      transaction.addToBackStack(null);
+    	      transaction.commit();
+    }
+    @Override
+    public void onAddContact()
+    {
+    	if (findViewById(R.id.fragmentContainer) != null){
+    		displayModifyFragment(R.id.fragmentContainer, null); 
+    	}
+    }
+    private void displayModifyFragment(int viewID, Bundle info)
+    {
+    	ModifyFragment addEditFragment = new ModifyFragment();
+    	if(info !=null)
+    	{
+    		addEditFragment.setArguments(info);
+    		FragmentTransaction transaction = 
+    		         getFragmentManager().beginTransaction();
+    		      transaction.replace(viewID, addEditFragment);
+    		      transaction.addToBackStack(null);
+    		      transaction.commit();
+    	}	
+    }
+    
+    @Override
+    public void onContactDeleted()
+    {
+       getFragmentManager().popBackStack(); // removes top of back stack
+       contactFragment.updateContactList();
+    }
+    @Override
+    public void onEditContact(Bundle info)
+    {
+    	displayModifyFragment(R.id.fragmentContainer, info);
+    }
+    @Override
+    public void onAddEditCompleted(long rowID)
+    {
+       getFragmentManager().popBackStack();
+       contactFragment.updateContactList();
+    
+    }
+   
+}

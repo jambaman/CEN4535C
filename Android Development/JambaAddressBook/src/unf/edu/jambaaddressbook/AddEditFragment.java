@@ -1,0 +1,178 @@
+package unf.edu.jambaaddressbook;
+
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.Fragment;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class AddEditFragment extends Fragment
+{
+     
+   public interface ModifyFragmentListener
+   {
+      
+      public void onAddEditFinish(long rowID);
+   }
+   
+   private ModifyFragmentListener listener; 
+   
+   private long rowID; 
+   private Bundle contactInfo; 
+
+   
+   private EditText nameEditText;
+   private EditText phoneEditText;
+   private EditText emailEditText;
+   private EditText streetEditText;
+   private EditText cityStateEditText;//city,state,zip
+
+      
+   @Override
+   public void onAttach(Activity activity)
+   {
+      super.onAttach(activity);
+      listener = (ModifyFragmentListener) activity; 
+   }
+
+   
+   @Override
+   public void onDetach()
+   {
+      super.onDetach();
+      listener = null; 
+   }
+   
+   
+   @Override
+   public View onCreateView(LayoutInflater inflater, ViewGroup container,
+      Bundle savedInstanceState)
+   {
+      super.onCreateView(inflater, container, savedInstanceState);    
+      setRetainInstance(true); 
+      setHasOptionsMenu(true); 
+      
+      
+      View view = 
+         inflater.inflate(R.layout.fragment_add_edit, container, false);
+      nameEditText = (EditText) view.findViewById(R.id.nameEditText);
+      phoneEditText = (EditText) view.findViewById(R.id.phoneEditText);
+      emailEditText = (EditText) view.findViewById(R.id.emailEditText);
+      streetEditText = (EditText) view.findViewById(R.id.streetEditText);
+      cityStateEditText = (EditText) view.findViewById(R.id.cityStateEditText);
+      
+
+      contactInfo = getArguments(); 
+
+      if (contactInfo != null)
+      {
+         rowID = contactInfo.getLong(MainActivity.ROW_ID);
+         nameEditText.setText(contactInfo.getString("name"));  
+         phoneEditText.setText(contactInfo.getString("phone"));  
+         emailEditText.setText(contactInfo.getString("email"));  
+         streetEditText.setText(contactInfo.getString("street"));  
+         cityStateEditText.setText(contactInfo.getString("city"));  
+        
+      } 
+      
+      
+      Button saveContactButton = 
+         (Button) view.findViewById(R.id.saveContactButton);
+      saveContactButton.setOnClickListener(saveContactButtonClicked);
+      return view;
+   }
+
+   OnClickListener saveContactButtonClicked = new OnClickListener() 
+   {
+      @Override
+      public void onClick(View v) 
+      {
+         if (nameEditText.getText().toString().trim().length() != 0)
+         {
+            
+            AsyncTask<Object, Object, Object> saveContactTask = 
+               new AsyncTask<Object, Object, Object>() 
+               {
+                  @Override
+                  protected Object doInBackground(Object... params) 
+                  {
+                     saveContact(); 
+                     return null;
+                  } 
+      
+                  @Override
+                  protected void onPostExecute(Object result) 
+                  {
+                     // hide soft keyboard
+                     InputMethodManager keyboard = (InputMethodManager) 
+                        getActivity().getSystemService(
+                           Context.INPUT_METHOD_SERVICE);
+                     keyboard.hideSoftInputFromWindow(
+                        getView().getWindowToken(), 0);
+
+                     listener.onAddEditFinish(rowID);
+                  } 
+               }; 
+               
+            
+            saveContactTask.execute((Object[]) null); 
+         } 
+         else 
+         {
+            DialogFragment nameValidation = 
+               new DialogFragment()
+               {
+                  @Override
+                  public Dialog onCreateDialog(Bundle savedInstanceState)
+                  {
+                     AlertDialog.Builder builder = 
+                        new AlertDialog.Builder(getActivity());
+                     builder.setMessage(R.string.validation_message);
+                     builder.setPositiveButton(R.string.ok, null);                     
+                     return builder.create();
+                  }               
+               };
+            
+            nameValidation.show(getFragmentManager(), "error saving contact");
+         } 
+      } 
+   }; 
+   
+   private void saveContact() 
+   {
+      
+      DatabaseConnector databaseConnector = 
+         new DatabaseConnector(getActivity());
+
+      if (contactInfo == null)
+      {
+         
+         rowID = databaseConnector.insertContact(
+            nameEditText.getText().toString(),
+            phoneEditText.getText().toString(), 
+            emailEditText.getText().toString(), 
+            streetEditText.getText().toString(),
+            cityStateEditText.getText().toString());
+      } 
+      else
+      {
+         databaseConnector.updateContact(rowID,
+            nameEditText.getText().toString(),
+            phoneEditText.getText().toString(), 
+            emailEditText.getText().toString(), 
+            streetEditText.getText().toString(),
+            cityStateEditText.getText().toString());
+      }
+   } 
+} 

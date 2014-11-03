@@ -1,0 +1,24 @@
+1414901473329	Delete element
+1414901479086	Delete element
+1414901619700	Delete element
+1414901624560	Delete element
+1414901630383	Delete element
+1414901813906	Delete element
+1414901817969	Delete element
+1414901821762	Delete element
+1414901825429	Delete element
+1414901829337	Delete element
+1415024886657	Rename type 'AddEditFragmentListener'
+1415024994357	Rename method 'onAddEditCompleted'
+1415025029740	Rename field 'cityEditText'
+1415025099088	Rename field 'contactInfoBundle'
+1415026546860	Rename local variable 'imm'
+1415026618201	Rename local variable 'errorSaving'
+1415027420984	Rename type 'GetContactsTask'
+1415027439190	Rename field 'databaseConnector'
+1415028269974	Rename field 'cityTextView'
+1415028330483	Rename local variable 'arguments'
+1415028389974	Rename local variable 'arguments'
+1415028416749	Rename type 'LoadContactTask'
+1415028444043	Rename field 'databaseConnector'
+1415028478132	Rename local variable 'cityIndex'

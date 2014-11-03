@@ -16,7 +16,7 @@
 	<section name="SaveAsDialogSettings">
 		<item value="528" key="DIALOG_WIDTH"/>
 		<item value="22" key="DIALOG_Y_ORIGIN"/>
-		<item value="284" key="DIALOG_X_ORIGIN"/>
+		<item value="209" key="DIALOG_X_ORIGIN"/>
 		<item value="529" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>

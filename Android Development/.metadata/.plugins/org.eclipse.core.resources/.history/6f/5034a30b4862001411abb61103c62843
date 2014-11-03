@@ -1,0 +1,7 @@
+package unf.edu.jambaaddressbook;
+
+import android.app.Fragment;
+
+public class AddEditFragment extends Fragment {
+
+}

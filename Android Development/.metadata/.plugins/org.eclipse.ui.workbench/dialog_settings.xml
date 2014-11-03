@@ -12,11 +12,22 @@
 		<list key="textEntries">
 		</list>
 	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="28" key="DIALOG_Y_ORIGIN"/>
+		<item value="231" key="DIALOG_X_ORIGIN"/>
+	</section>
 	<section name="InstallationDialogSettings">
 		<item value="702" key="DIALOG_WIDTH"/>
 		<item value="-131" key="DIALOG_Y_ORIGIN"/>
 		<item value="652" key="DIALOG_HEIGHT"/>
 		<item value="-19" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="308" key="DIALOG_WIDTH"/>
+		<item value="108" key="DIALOG_Y_ORIGIN"/>
+		<item value="386" key="DIALOG_X_ORIGIN"/>
+		<item value="415" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="ImportExportAction">

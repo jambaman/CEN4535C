@@ -1,0 +1,114 @@
+package unf.edu.jambaaddressbook;
+
+
+
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.content.ContentValues;
+
+
+
+public class DatabaseConnector {
+
+	private static final String DATABASE_NAME = "AddressBook";
+    
+	   private SQLiteDatabase database; // for interacting with the database
+	   private DatabaseOpenHelper databaseOpenHelper; // creates the database
+
+	   public DatabaseConnector(Context context) 
+	   {
+	      // create a new DatabaseOpenHelper
+	      databaseOpenHelper = 
+	         new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);
+	   }
+
+	   // open the database connection
+	   public void open() throws SQLException 
+	   {
+	      // create or open a database for reading/writing
+	      database = databaseOpenHelper.getWritableDatabase();
+	   }
+	   
+	   public void close() 
+	   {
+	      if (database != null)
+	         database.close(); // close the database connection
+	   } 
+	   
+	   public long insertContact(String name, String phone, String email,  
+			      String street, String cityState) 
+			   {
+			      ContentValues newContact = new ContentValues();
+			      newContact.put("name", name);
+			      newContact.put("phone", phone);
+			      newContact.put("email", email);
+			      newContact.put("street", street);
+			      newContact.put("city", cityState);
+			      
+
+			      open(); // open the database
+			      long rowID = database.insert("contacts", null, newContact);
+			      close(); // close the database
+			      return rowID;
+			   } 
+	   public void updateContact(long id, String name, String phone, 
+			      String email, String street, String cityState) 
+			   {
+			      ContentValues editContact = new ContentValues();
+			      editContact.put("name", name);
+			      editContact.put("phone", phone);
+			      editContact.put("email", email);
+			      editContact.put("street", street);
+			      editContact.put("city", cityState);
+			      
+
+			      open(); // open the database
+			      database.update("contacts", editContact, "_id=" + id, null);
+			      close(); // close the database
+			   } // end method updateContact
+	   public Cursor getAllContacts() 
+	   {
+	      return database.query("contacts", new String[] {"_id", "name"}, 
+	         null, null, null, null, "name");
+	   } 
+	   public Cursor getOneContact(long id) 
+	   {
+	      return database.query(
+	         "contacts", null, "_id=" + id, null, null, null, null);
+	   } 
+	   public void deleteContact(long id) 
+	   {
+	      open(); // open the database
+	      database.delete("contacts", "_id=" + id, null);
+	      close(); // close the database
+	   } 
+	   private class DatabaseOpenHelper extends SQLiteOpenHelper 
+	   {
+	      // constructor
+	      public DatabaseOpenHelper(Context context, String name,
+	         CursorFactory factory, int version) 
+	      {
+	         super(context, name, factory, version);
+	      }
+	      @Override
+	      public void onCreate(SQLiteDatabase db) 
+	      {
+	         // query to create a new table named contacts
+	         String createQuery = "CREATE TABLE contacts" +
+	            "(_id integer primary key autoincrement," +
+	            "name TEXT, phone TEXT, email TEXT, " +
+	            "street TEXT, cityState TEXT);";
+	                  
+	         db.execSQL(createQuery); // execute query to create the database
+	      }
+	         public void onUpgrade(SQLiteDatabase db, int oldVersion, 
+	                 int newVersion) 
+	             {
+	             }
+	      } 
+	
+}
